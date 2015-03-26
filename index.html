@@ -7,14 +7,24 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.7.0/underscore-min.js" type="text/javascript"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.1.2/backbone-min.js" type="text/javascript"></script>
         <script src="games.js" type="text/javascript"></script>
-        <script src="ng-games.js" type="text/javascript"></script>
-        <script src="bb-games.js" type="text/javascript"></script>
     </head>
     <body>
         <strong>jQuery Version</strong>
+	<br>
+	Number of players: <input size="2" type="number" id="players" value="4" name="Number of Players"/><br>
+    Play time: <input size="4" type="number" id="playtime" value="30" name="Playtime"/> minutes<br>
+    +/- : <input size="4" type="number" id="playtime_mod" value="10" name="Playtime"/> minutes<br>
+	Order by:
+        <input type="radio" name="order" id="order_alpha" value="alpha"/>Alphabetical
+        <input type="radio" name="order" id="order_playtime" value="playtime"/>Play time
+        <input type="radio" name="order" id="order_score" value="score"/>Rating
+        <input type="radio" name="order" id="order_random" value="random" checked/>Random
+        <input type="checkbox" name="order" id="order_desc" value="desc"/>Order descending
+	<br>
+	<button type="button" class="btn btn-danger" id="new_groups">Reselect Groups</button>
         <ul class="games">
         </ul>
-        
+        <!--
         <div ng-app="sampleapp">
             <div ng-controller="GameController">
                 <strong>Angular version</strong>
@@ -29,7 +39,7 @@
             <ul id="game-list">
             </ul>
         </div>
-        
+        -->
     </body>
 </html>
 
